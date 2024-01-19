@@ -38,7 +38,7 @@ describe("Test suit", function(){
     })
 });
 
-describe.skip("Test suit for stub", function() {
+describe("Test suit for stub", function() {
     it("Stub the add method", function() {
       var stub = sinon.stub(myObj, "add");
       stub
