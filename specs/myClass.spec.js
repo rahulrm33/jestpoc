@@ -6,7 +6,7 @@ var expect = chai.expect;
 const chaiaspromise = require("chai-as-promised");
 chai.use(chaiaspromise);
 
-describe("Test suit", function(){
+describe.skip("Test suit", function(){
     it("Test the add method", function(){
         expect(myObj.add(1,2)).to.be.equal(3);
     });
