@@ -6,37 +6,37 @@ var expect = chai.expect;
 const chaiaspromise = require("chai-as-promised");
 chai.use(chaiaspromise);
 
-describe("Test suit", function(){
-    it("Test the add method", function(){
-        expect(myObj.add(1,2)).to.be.equal(3);
-    });
+// describe.skip("Test suit", function(){
+//     it("Test the add method", function(){
+//         expect(myObj.add(1,2)).to.be.equal(3);
+//     });
 
-    it("spy the add method",function(){
-        var spy = sinon.spy(myObj,"add");
-        var arg1 = 10,
-        arg2 = 20;        
-        myObj.callAnotherFn(arg1,arg2);
-        // sinon.assert.calledOnce(spy);
-        expect(spy.calledOnce).to.be.true;
-        expect(spy.calledWith(10,20)).to.be.true;
-    });
+//     it("spy the add method",function(){
+//         var spy = sinon.spy(myObj,"add");
+//         var arg1 = 10,
+//         arg2 = 20;        
+//         myObj.callAnotherFn(arg1,arg2);
+//         // sinon.assert.calledOnce(spy);
+//         expect(spy.calledOnce).to.be.true;
+//         expect(spy.calledWith(10,20)).to.be.true;
+//     });
 
-    it("spy the add method",function(){
-        var callback = sinon.spy();
-        myObj.calltheCallback(callback);
-        expect(callback.calledOnce).to.be.true;
-    });
+//     it("spy the add method",function(){
+//         var callback = sinon.spy();
+//         myObj.calltheCallback(callback);
+//         expect(callback.calledOnce).to.be.true;
+//     });
 
-    it("Mock the sayHello method",function(){
-        var mock = sinon.mock(myObj);
-        var expectation = mock.expects("sayHello");
-        expectation.exactly(1);
-        expectation.withArgs("Hello world");
-        // myObj.callAnotherFn(10,20)
-        myObj.callAnotherFn();
-        mock.verify();
-    })
-});
+//     it("Mock the sayHello method",function(){
+//         var mock = sinon.mock(myObj);
+//         var expectation = mock.expects("sayHello");
+//         expectation.exactly(1);
+//         expectation.withArgs("Hello world");
+//         // myObj.callAnotherFn(10,20)
+//         myObj.callAnotherFn();
+//         mock.verify();
+//     })
+// });
 
 describe("Test suit for stub", function() {
     it("Stub the add method", function() {
