@@ -30,7 +30,7 @@ jobs:
     - name: Send Teams Notification
       env:
         TEAMS_WEBHOOK_URL: https://kaartechit.webhook.office.com/webhookb2/a02bfaab-2aea-42e9-be2c-bcc5a3eeedfb@87a25c2a-2cb4-4c40-9cbc-5268c0ed1eeb/IncomingWebhook/08536106ce3d41ec9b24db6fb2f07759/5a47267f-69bf-432d-bcb1-6366f34b8bbf
-      run: npx teams-notification -m "Test report is available: [Link to report](https://github.com/rahulrm33/jestpoc/blob/main/reports/lcov-report/myClass.js.html)"
+      run: npx teams-notification -m https://github.com/rahulrm33/jestpoc/blob/main/reports/lcov-report/myClass.js.html
 
 
 # name: Node.js CI
